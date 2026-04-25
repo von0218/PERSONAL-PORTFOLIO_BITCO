@@ -3,76 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Data Science Student</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Personal Portfolio | Aesthetic & Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #3b82f6; }
-        .project-card { border: 1px solid #e5e7eb; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
-        .tag { font-size: 0.8rem; background: #3b82f6; color: white; padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
+        :root {
+            --bg: #fafafa;
+            --text: #1a1a1a;
+            --accent: #d4af37; /* Soft Gold */
+            --card-bg: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .subtitle {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #666;
+        }
+
+        nav {
+            margin-top: 2rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom: 1px solid var(--accent);
+        }
+
+        /* Pinterest-Style Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-top: 1rem;
+        }
+
+        .footer {
+            margin-top: 6rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
     </style>
 </head>
 <body>
-    <main class="container">
+
+    <div class="container">
         <header>
-            <hgroup>
-                <h1>Yvonne Margaret D. Bitco</h1>
-                <p>Data Science Student | Student Leader</p>
-            </hgroup>
+            <p class="subtitle">Data Science • IoT • Creative Design</p>
+            <h1>Personal Portfolio</h1>
             <nav>
-                <ul>
-                    <li><a href="mailto:bitco.yvonne123@email.com">Email</a></li>
-                    <li><a href="https://github.com/von0218" target="_blank">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-                </ul>
+                <a href="#projects">Work</a>
+                <a href="#about">About</a>
+                <a href="mailto:your-email@example.com">Contact</a>
             </nav>
         </header>
 
-        <hr>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am a Data Science student in the Philippines specializing in <strong>Internet of Things (IoT)</strong> applications for public health and civic governance. 
-                My work bridges the gap between hardware data collection and statistical modeling to create transparent, actionable insights.
-            </p>
-        </section>
-
         <section id="projects">
-            <h2>Featured Works</h2>
-
-            <article class="project-card">
-                <h3>RESPIRA (Portable Digital Spirometer)</h3>
-                <p>An IoT-based research project for pulmonary diagnostics. Integrated CNN models for quality control, adhering to the <strong>2022 ERS/ATS Technical Standards</strong> for interpretive strategies.</p>
-                <div>
-                    <span class="tag">Python</span><span class="tag">IoT</span><span class="tag">Deep Learning</span>
+            <h2>Selected Works</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Spiro-Hininga</h3>
+                    <p>A digital spirometer utilizing CNN models for diagnostic validation. Grounded in 2022 ATS/ERS standards.</p>
+                    <span class="tag">Technical Research</span>
                 </div>
-            </article>
 
-            <article class="project-card">
-                <h3>Coffee Production Analysis (Bukidnon)</h3>
-                <p>Data-driven insights into the Philippine coffee industry, focusing on production challenges and economic impact for local farmers.</p>
-                <div>
-                    <span class="tag">Data Analysis</span><span class="tag">Agriculture</span>
+                <div class="card">
+                    <h3>Bukidnon Coffee Analytics</h3>
+                    <p>Statistical modeling of agricultural trends and production challenges in the heart of Philippine coffee country.</p>
+                    <span class="tag">Data Science</span>
                 </div>
-            </article>
 
-            <article class="project-card">
-                <h3>Public Relations & Branding</h3>
-                <p>Contributor to the PR team for <strong>Andam Higala</strong>, managing branding and promotional materials ("pubmats") for community-focused initiatives.</p>
-                <div>
-                    <span class="tag">Design</span><span class="tag">Strategic Communication</span>
+                <div class="card">
+                    <h3>Andam Higala Branding</h3>
+                    <p>Visual identity and "pubmat" design for community-led initiatives and Women's Month celebrations.</p>
+                    <span class="tag">PR & Design</span>
                 </div>
-            </article>
+                
+                <div class="card">
+                    <h3>Civic Tech: AI Auditor</h3>
+                    <p>Envisioning transparency through automated tracking of government expenditure data.</p>
+                    <span class="tag">Governance</span>
+                </div>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Technical Stack</h2>
-            <ul>
-                <li><strong>Languages:</strong> Python, SQL, R</li>
-                <li><strong>Data Science:</strong> Scikit-learn, Pandas, Statistical Modeling</li>
-                <li><strong>Tools:</strong> Render, Google Workspace Automation, IoT Hardware (Sensors)</li>
-            </ul>
-        </section>
-    </main>
+        <footer class="footer">
+            <p>© 2026 • Built for the Sunday Deadline</p>
+        </footer>
+    </div>
+
 </body>
 </html>
