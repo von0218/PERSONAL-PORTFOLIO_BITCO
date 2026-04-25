@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Data Science Student</title>
+    <title>Portfolio | Data Research & Leadership</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -39,7 +39,7 @@
         }
 
         .profile-img-container {
-            aspect-ratio: 1 / 1; /* Creates that 2x2 / Square feel */
+            aspect-ratio: 1 / 1;
             overflow: hidden;
             border-radius: 20px;
             border: 8px solid white;
@@ -57,7 +57,7 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             line-height: 1.1;
             font-style: italic;
-            margin-bottom: 1.5rem;
+            margin: 0 0 1.5rem 0;
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -82,14 +82,17 @@
 
         .card {
             background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 20px;
+            padding: 2.5rem;
+            border-radius: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             border: 1px solid rgba(184, 154, 103, 0.1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s ease;
         }
+
+        .card:hover { transform: translateY(-5px); }
 
         .card.large { grid-column: span 4; }
         .card.medium { grid-column: span 2; }
@@ -109,7 +112,14 @@
             border-radius: 50px;
             font-weight: 700;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin: 0 0 1rem 0;
+            line-height: 1.2;
         }
 
         /* Marquee */
@@ -119,7 +129,7 @@
             padding: 1.5rem 0;
             overflow: hidden;
             white-space: nowrap;
-            margin-top: 4rem;
+            margin-top: 6rem;
         }
 
         .marquee-content {
@@ -152,12 +162,15 @@
                 <img src="profile.jpg" alt="Profile Photo">
             </div>
             <div class="profile-text">
-                <span class="subtitle">Data Scientist • Student Leader</span>
-                <h1>Crafting Data <br>into Narrative.</h1>
-                <p>Based in Cagayan de Oro City. Dedicated to leveraging IoT and machine learning for community-driven public health and civic transparency.</p>
+                <span class="subtitle">Data Research • Strategic Design • Leadership</span>
+                <h1>Turning Data <br>into Direction.</h1>
+                <p>
+                    I build tools that improve transparency and designs that tell a story. 
+                    As a dedicated researcher and communicator, I am seeking to apply my skills in project management and visual strategy to help a mission-driven organization grow.
+                </p>
                 <nav style="display: flex; gap: 1.5rem; margin-top: 2rem;">
-                    <a href="mailto:your-email@example.com" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--accent);">Contact Me</a>
-                    <a href="https://github.com/von0218" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--accent);">GitHub</a>
+                    <a href="mailto:bitco.yvonne123@gmail.com" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">Contact Me</a>
+                    <a href="https://github.com/von0218" target="_blank" style="color: var(--text); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">GitHub</a>
                 </nav>
             </div>
         </section>
@@ -165,30 +178,30 @@
         <div class="grid">
             <div class="card large">
                 <div>
-                    <span class="tag">Healthcare IoT</span>
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">RESPIRA</h3>
-                    <p>A portable digital spirometer using CNN models for quality validation, adhering to 2022 ATS/ERS standards.</p>
+                    <span class="tag">Flagship Research</span>
+                    <h3>RESPIRA</h3>
+                    <p>A portable digital spirometer using CNN models for quality validation, grounded in 2022 ATS/ERS interpretive strategies.</p>
                 </div>
             </div>
             <div class="card medium">
                 <div>
-                    <span class="tag">Agriculture</span>
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Coffee Analytics</h3>
-                    <p>Statistical modeling for Bukidnon coffee production.</p>
+                    <span class="tag">Data Analytics</span>
+                    <h3>Robust Income Estimation for Small-Scale Coffee Farmers in Bukidnon: A Computational Bootstrap Analysis</h3>
+                    <p>Statistical modeling and trend analysis for Bukidnon coffee production.</p>
                 </div>
             </div>
             <div class="card medium">
                 <div>
-                    <span class="tag">Leadership</span>
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">COMGAS Head</h3>
-                    <p>Building tools for government expenditure transparency.</p>
+                    <span class="tag">Civic Governance</span>
+                    <h3>GUJDASCI COMGAS Head</h3>
+                    <p>Directing initiatives for government expenditure transparency and automated reporting tools.</p>
                 </div>
             </div>
             <div class="card large">
                 <div>
-                    <span class="tag">Branding</span>
-                    <h3 style="font-family: 'Playfair Display'; font-size: 1.8rem;">Andam Higala USTP Head of Public Relations</h3>
-                    <p>Visual identity and strategic PR materials for community-focused initiatives.</p>
+                    <span class="tag">Creative Direction</span>
+                    <h3>Andam Higala USTP PR Head</h3>
+                    <p>Leading the Public Relations team in crafting visual identity, "pubmats," and strategic communication for community initiatives.</p>
                 </div>
             </div>
         </div>
@@ -196,7 +209,7 @@
 
     <div class="marquee">
         <div class="marquee-content">
-            DATA SCIENCE • IOT ARCHITECTURE • BRAND DESIGN • MACHINE LEARNING • PUBLIC RELATIONS • DATA SCIENCE • IOT ARCHITECTURE • BRAND DESIGN • MACHINE LEARNING • PUBLIC RELATIONS •
+            DATA RESEARCH • STRATEGIC BRANDING • PROJECT MANAGEMENT • PUBLIC RELATIONS • DATA RESEARCH • STRATEGIC BRANDING • PROJECT MANAGEMENT • PUBLIC RELATIONS •
         </div>
     </div>
 
